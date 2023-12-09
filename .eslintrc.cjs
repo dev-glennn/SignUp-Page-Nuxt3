@@ -21,5 +21,7 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['@typescript-eslint', 'vue', 'prettier'],
-  rules: {}
+  rules: {
+    'vue/multi-word-component-names': 'off'
+  }
 };
