@@ -1,4 +1,4 @@
-const isEmpty = (value: undefined | null | string | object) => {
+export const isEmpty = (value: undefined | null | string | object) => {
   if (value === undefined || value === null) {
     return true; // undefined 또는 null인 경우
   }

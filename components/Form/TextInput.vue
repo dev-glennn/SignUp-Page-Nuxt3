@@ -2,13 +2,9 @@
 // props
 interface TextInputProps {
   modelValue: string;
-  placeholder?: string;
-  type?: string;
 }
 withDefaults(defineProps<TextInputProps>(), {
-  modelValue: '',
-  placeholder: '',
-  type: 'text'
+  modelValue: ''
 });
 // emit
 const emit = defineEmits<{
@@ -23,10 +19,8 @@ const clickHandler = (event: Event) => {
 
 <template>
   <input
-    class="text__input block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
-    :type="type"
+    class="text__input block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:italic placeholder:text-gray-400 sm:text-sm sm:leading-6"
     :value="modelValue"
-    :placeholder="placeholder"
     @input="clickHandler"
   />
 </template>
