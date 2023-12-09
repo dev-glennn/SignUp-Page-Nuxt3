@@ -8,21 +8,17 @@ export default defineNuxtConfig({
   postcss: {
     plugins: {
       tailwindcss: {},
-      autoprefixer: {},
+      autoprefixer: {}
     }
   },
 
-  modules: [
-    '@nuxtjs/eslint-module'
-  ],
+  modules: ['@nuxtjs/eslint-module'],
 
   eslint: {
     // lintOnStart: false
   },
 
   vite: {
-    plugins: [
-      eslintPlugin()
-    ]
+    plugins: [eslintPlugin()]
   }
-})
+});
