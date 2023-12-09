@@ -57,4 +57,9 @@ const prevHandler = () => {
     @prev="prevHandler"
     @next="nextHandler"
   />
+  <SignUpCardInfo
+    v-if="type === stepIds[2]"
+    @prev="prevHandler"
+    @next="nextHandler"
+  />
 </template>
