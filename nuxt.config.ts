@@ -5,6 +5,12 @@ export default defineNuxtConfig({
   css: ['~/assets/css/tailwind.css', '~/assets/css/reset.css', '~/assets/scss/app.scss'],
   devtools: { enabled: true },
 
+  runtimeConfig: {
+    public: {
+      daumURL: '//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js'
+    }
+  },
+
   postcss: {
     plugins: {
       tailwindcss: {},
