@@ -22,6 +22,8 @@ module.exports = {
   },
   plugins: ['@typescript-eslint', 'vue', 'prettier'],
   rules: {
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'warn',
     'vue/multi-word-component-names': 'off'
   }
 };
