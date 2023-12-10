@@ -1,33 +1,33 @@
 import { defineStore } from 'pinia';
-import { isEmpty } from '~/composables/useHasEmptyValue';
+import { isEmpty, useHasEmptyValues } from '@/composables/useHasEmptyValue';
 
 type AccountType = Pick<RegisterSchema, 'email' | 'password'>;
 type UserType = Pick<RegisterSchema, 'name' | 'phoneNumber' | 'zonecode' | 'address'>;
 type CardType = ValueOf<Pick<RegisterSchema, 'cardNumber'>>;
 
-const initialAccountInfo: AccountType = {
+const initialAccountInfo: AccountType = Object.freeze({
   email: '',
   password: ''
-};
-const initialUserInfo: UserType = {
+});
+const initialUserInfo: UserType = Object.freeze({
   name: '',
   phoneNumber: '',
   zonecode: '',
   address: ''
-};
+});
 
-const initialCardNumber: CardType = {
+const initialCardNumber: CardType = Object.freeze({
   number1: '',
   number2: '',
   number3: '',
   number4: ''
-};
+});
 
 export const useUserStore = defineStore('user', {
   state: () => ({
-    accountInfo: initialAccountInfo,
-    userInfo: initialUserInfo,
-    cardNumber: initialCardNumber
+    accountInfo: structuredClone(initialAccountInfo),
+    userInfo: structuredClone(initialUserInfo),
+    cardNumber: structuredClone(initialCardNumber)
   }),
   getters: {
     getAccountInfo: (state) => state.accountInfo,

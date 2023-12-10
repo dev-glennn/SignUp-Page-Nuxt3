@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 /** import */
-import { useUserStore } from '~/stores/user';
+import { useUserStore } from '@/stores/user';
 const store = useUserStore();
 
 /** data */

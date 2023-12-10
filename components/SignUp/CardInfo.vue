@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 /** import */
-import { RegExpRule } from '~/composables/useValidationCheck';
-import { useUserStore } from '~/stores/user';
+import { RegExpRule } from '@/composables/useValidationCheck';
+import { useUserStore } from '@/stores/user';
 const store = useUserStore();
 
 /** data */
@@ -114,6 +114,7 @@ const submitHandler = (e: Event) => {
 
       <div class="flex gap-4 mt-10">
         <Button
+          type="button"
           :text="'이전'"
           class="flex-1"
           @click="$emit('prev')"

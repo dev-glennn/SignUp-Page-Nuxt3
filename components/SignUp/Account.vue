@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 /** import */
-import { RegExpRule } from '~/composables/useValidationCheck';
-import { useUserStore } from '~/stores/user';
+import { RegExpRule } from '@/composables/useValidationCheck';
+import { useUserStore } from '@/stores/user';
 const store = useUserStore();
 
 /** data */
