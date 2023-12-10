@@ -73,11 +73,6 @@ export const useUserStore = defineStore('user', {
     },
     setCardNumber4(number4: ValueOf<Pick<CardType, 'number4'>>) {
       this.cardNumber.number4 = number4;
-    },
-    setInit() {
-      this.accountInfo = initialAccountInfo;
-      this.userInfo = initialUserInfo;
-      this.cardNumber = initialCardNumber;
     }
   }
 });

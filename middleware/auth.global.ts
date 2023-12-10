@@ -11,6 +11,6 @@ export default defineNuxtRouteMiddleware(({ path }) => {
   const inSignUpPage = path.split('/')[1] === 'signUp';
   // 회원가입 X && 회원가입 페이지 X
   if (!auth && !inSignUpPage) {
-    return navigateTo('/signUp/account');
+    return navigateTo({ path: '/signUp', query: { type: 'account' } });
   }
 });

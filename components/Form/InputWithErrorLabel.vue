@@ -6,7 +6,7 @@ defineProps<{
 </script>
 
 <template>
-  <label class="grid grid-cols-[5rem_auto] gap-[3rem] items-baseline">
+  <label class="grid grid-cols-none gap-[0.5rem] sm:grid-cols-[5rem_auto] sm:gap-[3rem] items-baseline">
     <span class="block text-sm font-medium text-slate-700">
       {{ label }}
     </span>
